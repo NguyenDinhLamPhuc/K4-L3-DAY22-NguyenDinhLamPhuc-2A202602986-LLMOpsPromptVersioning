@@ -1,0 +1,40 @@
+﻿Demo: JSON Formatting & Repair
+=======================================================
+
+[Valid JSON] ✅ Pass
+  Input:  {"name": "Alice", "age": 30}
+  Output: {"name": "Alice", "age": 30}
+  🔧 JSON đã được sửa thành công
+
+[Markdown fences] ✅ Pass
+  Input:  ```json
+{"name": "Bob"}
+```
+  Output: {
+  "name": "Bob"
+}
+  🔧 JSON đã được sửa thành công
+
+[Single quotes] ✅ Pass
+  Input:  {'name': 'Charlie', 'score': 95}
+  Output: {
+  "name": "Charlie",
+  "score": 95
+}
+  🔧 JSON đã được sửa thành công
+
+[Trailing comma] ✅ Pass
+  Input:  {"key": "value",}
+  Output: {
+  "key": "value"
+}
+
+[Truly invalid] ✅ Pass
+  Input:  This is not JSON at all: ??? {]
+  Output: {"error": "Không thể phân tích JSON", "raw": "This is not JS
+
+✅ Bước 4 hoàn thành!
+WARNING:opentelemetry.exporter.otlp.proto.http.trace_exporter:Transient error HTTPSConnectionPool(host='hty0gc1ok3.execute-api.us-east-1.amazonaws.com', port=443): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError("HTTPSConnection(host='hty0gc1ok3.execute-api.us-east-1.amazonaws.com', port=443): Failed to resolve 'hty0gc1ok3.execute-api.us-east-1.amazonaws.com' ([Errno 11001] getaddrinfo failed)")) encountered while exporting spans batch, retrying in 0.92s.
+WARNING:opentelemetry.exporter.otlp.proto.http.trace_exporter:Transient error HTTPSConnectionPool(host='hty0gc1ok3.execute-api.us-east-1.amazonaws.com', port=443): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError("HTTPSConnection(host='hty0gc1ok3.execute-api.us-east-1.amazonaws.com', port=443): Failed to resolve 'hty0gc1ok3.execute-api.us-east-1.amazonaws.com' ([Errno 11001] getaddrinfo failed)")) encountered while exporting spans batch, retrying in 2.03s.
+WARNING:opentelemetry.exporter.otlp.proto.http.trace_exporter:Transient error HTTPSConnectionPool(host='hty0gc1ok3.execute-api.us-east-1.amazonaws.com', port=443): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError("HTTPSConnection(host='hty0gc1ok3.execute-api.us-east-1.amazonaws.com', port=443): Failed to resolve 'hty0gc1ok3.execute-api.us-east-1.amazonaws.com' ([Errno 11001] getaddrinfo failed)")) encountered while exporting spans batch, retrying in 3.69s.
+ERROR:opentelemetry.exporter.otlp.proto.http.trace_exporter:Failed to export spans batch due to timeout, max retries or shutdown.
